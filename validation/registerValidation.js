@@ -4,9 +4,9 @@ const isEmpty = require('./isEmpty')
 const validateRegisterInput = data => {
   let errors = {}
 
-  // check the email input
+  // check the email field
   if (isEmpty(data.email)) {
-    errors.email = 'Email field cannot be empty'
+    errors.email = 'Email field can not be empty'
   } else if (!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid, please provide a valid email'
   }
