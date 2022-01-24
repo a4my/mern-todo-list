@@ -92,10 +92,52 @@ export const GlobalProvider = props => {
     }
   }
 
+  // action: Add a Todo Item
+  const addToDo = toDo => {
+    dispatch({
+      type: 'SET_INCOMPLETE_TODOS',
+      payload: [toDo, ...state.incompleteToDos]
+    })
+  }
+
+  const toDoComplete = toDo => {
+    dispatch({
+      type: 'SET_INCOMPLETE_TODOS',
+      payload: state.incompleteToDos.filter(
+        incompleteToDo => incompleteToDo._id !== toDo._id
+      )
+    })
+
+    dispatch({
+      type: 'SET_COMPLETE_TODOS',
+      payload: [toDo, ...state.completeToDos]
+    })
+  }
+
+  const toDoIncomplete = toDo => {
+    dispatch({
+      type: 'SET_COMPLETE_TODOS',
+      payload: state.completeToDos.filter(
+        completeToDo => completeToDo._id !== toDo._id
+      )
+    })
+
+    const newIncompleteToDos = [toDo, ...state.incompleteToDos]
+    dispatch({
+      type: 'SET_INCOMPLETE_TODOS',
+      payload: newIncompleteToDos.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      )
+    })
+  }
+
   const value = {
     ...state,
     getCurrentUser,
-    logout
+    logout,
+    addToDo,
+    toDoComplete,
+    toDoIncomplete
   }
 
   return (
