@@ -135,7 +135,7 @@ router.get('/current', requiresAuth, (req, res) => {
 })
 
 // @route   PUT /api/auth/logout
-// @desc    Logout user a clear the cookie
+// @desc    Logout user and clear the cookie
 // @access  Private
 router.put('/logout', requiresAuth, async (req, res) => {
   try {
