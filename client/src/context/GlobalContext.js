@@ -80,9 +80,22 @@ export const GlobalProvider = props => {
     }
   }
 
+  // action: logout
+  const logout = async () => {
+    try {
+      await axios.put('/api/auth/logout')
+
+      dispatch({ type: 'RESET_USER' })
+    } catch (err) {
+      console.log(err)
+      dispatch({ type: 'RESET_USER' })
+    }
+  }
+
   const value = {
     ...state,
-    getCurrentUser
+    getCurrentUser,
+    logout
   }
 
   return (
