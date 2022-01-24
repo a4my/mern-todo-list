@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useGlobalContext } from '../context/GlobalContext'
 
 export default function AuthBox({ register }) {
-  const { getCurrentUser } = useGlobalContext()
+  const { getCurrentUser, user } = useGlobalContext()
+  const navigate = useNavigate()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState({})
+
+  useEffect(() => {
+    if (user && navigate) {
+      navigate('/dashboard')
+    }
+  }, [user, navigate])
 
   const onSubmit = e => {
     e.preventDefault()
