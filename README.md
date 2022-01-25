@@ -1,8 +1,8 @@
-# My Todo List ✏️
+# My Todo List ✏️📝✔️
 
-This repository contains the files of one of my React projects. This React App is supposed to be an app that lists video games and where you can search for a video game.
+This repository contains the files of one of my MERN projects. This is a MERN todo list where users can register and use their own todo lists.
 
-This project has parts that are mainly hard-coded and you cannot use the searchbar to search for a specific video game. However, the list of video games is coming from an API.
+Users can register and login to access their dashboard as well as creating and tracking todo items which can also be edited, deleted or toggled between completed and incompleted status.
 
 
 ## Demo 🖥 [live preview](https://my-todolist-mern.herokuapp.com/)
@@ -12,10 +12,10 @@ This project has parts that are mainly hard-coded and you cannot use the searchb
 ![site image](https://i.imgur.com/9SDsEAX.jpg)
 
 ## What I used 🔨
-My goal with this small application was to gather all different tools I've learned about for the past year such as HTML, SASS, Javascript and React JS.
+What I wanted to do with this todo list projects was to use the MongoDB database and Express server to create a more complex todo list app.
 
 ## Extra learning ✔
-I also wanted to use the data from an API and render the data on the front end with React JS.
+Along the way, I picked up more knowledge about Express, MongoDB and React such as using the context API and some new hooks. 
 
 ## Responsiveness 📱
 This project is responsive on any devices.
