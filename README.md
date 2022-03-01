@@ -5,7 +5,7 @@ This repository contains the files of one of my MERN projects. This is a MERN to
 Users can register and login to access their dashboard as well as creating and tracking todo items which can also be edited, deleted or toggled between completed and incompleted status.
 
 
-## Demo 🖥 [live preview](https://my-todolist-mern.herokuapp.com/)
+## Demo 🖥 [live preview](https://my-todolist-mern.herokuapp.com/) (Use test@test.com and 123456 to use my own dev account)
 
 ![site image](https://i.imgur.com/1BVOjXr.jpg)
 ![site image](https://i.imgur.com/Vh8yqD3.jpg)
